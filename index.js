@@ -8,8 +8,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("www"));
 
-app.get("/users/:uname", (req, res) => {
-    res.end("Hello " + req.params.uname);
+app.get("/users/:uname", (req, res) => { //a function with parameters
+    res.end("Hello " + req.params.uname + "... How are you today? What are you doing?");
 });
 
 let oGames = {};
